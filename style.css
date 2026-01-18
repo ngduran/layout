@@ -1,0 +1,87 @@
+/* style.css */
+
+:root {
+    /* Paleta de cores inspirada no Trello/Modern UI */
+    --color-bg: #f4f5f7;        /* Fundo da página */
+    --color-card: #ffffff;      /* Fundo do formulário */
+    --color-primary: #0052cc;   /* Azul institucional */
+    --color-border: #dfe1e6;    /* Bordas suaves */
+    --color-text: #172b4d;      /* Texto escuro padrão */
+    --gap-main: 5px;           /* Espaçamento padrão entre elementos */
+}
+
+/* RESET PADRÃO PROFISSIONAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial: padding não aumenta o tamanho da caixa */
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-bg); /* Cor de fundo clássica do Trello */
+}
+
+/* 1. ROOT: Ocupa a tela inteira */
+.app-root {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 2. LAYOUT-WRAPPER: Centraliza o conteúdo e dá respiro */
+.app-layout {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 3. SECTION/CARD: O container branco que "flutua" */
+.form-card {
+    background: var(--color-card);
+    width: 100%;
+    max-width: 800px; /* Limite profissional para leitura */
+    height: fit-content; /* Só cresce o necessário */
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 4. GRID/ROW-CONTAINER: A mágica da responsividade AS LINHAS (Os chassis)*/
+.row-container {
+    display: flex;
+    flex-wrap: wrap; /* MOBILE-FIRST: Por padrão, ele aceita quebrar linha */
+    gap: var(--gap-main);
+    margin-bottom: 20px;
+    background-color: #f4f5f7; /* Corzinha para enxergar */
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+
+/* BOXES VISUAIS (Para você enxergar os espaços) */
+.box-visual {
+    background-color: #0079bf; /* Azul Trello */
+    color: var(--color-text);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    min-height: 60px;
+}
+
+/* PROPORÇÕES FLEXÍVEIS */
+.flex-80 { flex: 1 1 75%; } /* Ocupa 75%, mas pode crescer */
+.flex-20 { flex: 1 1 20%; }
+.flex-50 { flex: 1 1 45%; }
+
+/* MEDIA QUERY: A regra de ouro */
+@media (max-width: 600px) {
+    .row-container {
+        flex-direction: column; /* No celular, tudo vira coluna */
+    }
+    .flex-80, .flex-20, .flex-50 {
+        flex: 1 1 100%; /* Todo mundo ganha 100% de largura */
+    }
+}
