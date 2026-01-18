@@ -65,8 +65,6 @@ body, html {
 .box-visual {
     background-color: #0079bf; /* Azul Trello */
     color: var(--color-text);
-    padding: 20px;
-    text-align: center;
     border-radius: 4px;
     min-height: 60px;
 }
@@ -75,6 +73,62 @@ body, html {
 .flex-80 { flex: 1 1 75%; } /* Ocupa 75%, mas pode crescer */
 .flex-20 { flex: 1 1 20%; }
 .flex-50 { flex: 1 1 45%; }
+
+
+
+.field_input {
+    width: 100%;       /* Ocupa toda a largura do .field-group */
+    border: none;      /* Remove a borda padrão do navegador */
+    outline: none;     /* Remove a linha de destaque ao clicar */
+    padding: 0 10px;   /* Adiciona um respiro interno para o texto não colar na borda */
+    background: white; /* Cor de fundo para o campo */
+    height: 40px;
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+}
+
+.field_label {
+    width: 100%;       /* Ocupa toda a largura do .field-group */
+    border: none;      /* Remove a borda padrão do navegador */
+    outline: none;     /* Remove a linha de destaque ao clicar */
+    padding: 0 10px;   /* Adiciona um respiro interno para o texto não colar na borda */
+    height: 40px;
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+}
+
+.field_time {
+    width: 100%;       /* Ocupa toda a largura do .field-group */
+    border: none;      /* Remove a borda padrão do navegador */
+    outline: none;     /* Remove a linha de destaque ao clicar */
+    padding: 0 10px;   /* Adiciona um respiro interno para o texto não colar na borda */
+    background: white; /* Cor de fundo para o campo */
+    height: 40px;
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+}
+
+.field_select {
+    width: 100%;       /* Ocupa toda a largura do .field-group */
+    border: none;      /* Remove a borda padrão do navegador */
+    outline: none;     /* Remove a linha de destaque ao clicar */
+    padding: 0 10px;   /* Adiciona um respiro interno para o texto não colar na borda */
+    background: white; /* Cor de fundo para o campo */
+    height: 40px;
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+}
+
+
+@supports (-webkit-touch-callout: none) {
+    input,
+    textarea,
+    select
+}
+
+
+
+
 
 /* MEDIA QUERY: A regra de ouro */
 @media (max-width: 600px) {

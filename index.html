@@ -14,13 +14,29 @@
             <section class="form-card">
                 
                 <div class="row-container">
-                    <div class="box-visual flex-80">Nome (80%)</div>
-                    <div class="box-visual flex-20">Hora (20%)</div>
+                    <div class="box-visual flex-80">
+                        <label for="nome" class="field_label">Nome da Instituição</label>
+                        <input class="field_input" type="text" id="nome" name="nome">
+                    </div>
+                    <div class="box-visual flex-20">
+                        <label for="horario_inicial" class="field_label">Hora Inicial</label>
+                        <input class="field_time" type="time" id="horario_inicial" name="horario_inicial" >
+                    </div>
                 </div>
 
                 <div class="row-container">
-                    <div class="box-visual flex-50">Estado (50%)</div>
-                    <div class="box-visual flex-50">Cidade (50%)</div>
+                    <div class="box-visual flex-80">
+                        <label for="frutas" class="field_label">Escolha uma fruta:</label>
+                        <select class="field_select" id="frutas" name="frutas" >
+                            <option value="maca">Maçã</option>
+                            <option value="banana">Banana</option>
+                            <option value="laranja">Laranja</option>
+                        </select>
+                    </div>
+                    <div class="box-visual flex-20">
+                        <label for="horario_inicial" class="field_label">Hora Inicial</label>
+                        <input type="time" id="horario_inicial" name="horario_inicial" class="field_time" >
+                    </div>
                 </div>
 
             </section>
