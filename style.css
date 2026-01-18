@@ -70,10 +70,10 @@ body, html {
     display: flex;
     flex-wrap: wrap; /* MOBILE-FIRST: Por padrão, ele aceita quebrar linha */
     gap: var(--gap-main);
-    margin-bottom: 20px;
+    margin-bottom: 5px; /*Separar um conjunto de linhas das outras*/
     background-color: #f4f5f7; /* Corzinha para enxergar */
-    padding: 10px;
-    border: 1px dashed #ccc;
+    padding: 0px;
+    //border: 1px dashed #ccc; /*aspecto tracejado em volta do container*/
 }
 
 /* BOXES VISUAIS (Para você enxergar os espaços) */
@@ -135,6 +135,7 @@ body, html {
 }
 
 
+/* Interrompe o zoon no ios nos campos quebrando o layout*/
 @supports (-webkit-touch-callout: none) {
     input,
     textarea,
