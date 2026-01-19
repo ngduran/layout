@@ -90,9 +90,18 @@ body, html {
 }
 
 /* PROPORÇÕES FLEXÍVEIS */
-.flex-80 { flex: 1 1 75%; } /* Ocupa 75%, mas pode crescer */
-.flex-20 { flex: 1 1 20%; }
-.flex-50 { flex: 1 1 45%; }
+.flex-80 { 
+    flex: 1 1 75%; 
+} /* Ocupa 75%, mas pode crescer */
+
+.flex-20 { 
+    flex: 1 1 20%;
+    max-width: 8rem;
+}
+
+.flex-50 { 
+    flex: 1 1 45%; 
+}
 
 .field_label {
     width: 100%;       /* Ocupa toda a largura do .field-group */
