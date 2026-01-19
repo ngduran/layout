@@ -149,6 +149,21 @@ body, html {
     cursor: pointer; 
 }
 
+/* Esconde o ícone mantendo a área de clique ativa */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    //bottom: 0;
+    //color: transparent;
+    //cursor: pointer;
+    //height: auto;
+    //left: 0;
+    //position: absolute;
+    //right: 0;
+    //top: 0;
+    //width: auto;
+}
+
+
 .field_select {
     width: 100%;       /* Ocupa toda a largura do .field-group */
     border: none;      /* Remove a borda padrão do navegador */
