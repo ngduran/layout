@@ -41,7 +41,7 @@ body, html {
     display: flex;
     flex: 1 1 auto;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     min-height: 100dvh;
 
     /* CENTRALIZAÇÃO: Ative para ver o form ir para o meio */
@@ -57,7 +57,7 @@ body, html {
     max-width: 800px; /* Limite profissional para leitura */
     height: fit-content; /* Só cresce o necessário */
     //height: auto;
-    padding: 24px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: max-width 0.3s ease;
@@ -149,20 +149,6 @@ body, html {
     cursor: pointer; 
 }
 
-/* Esconde o ícone mantendo a área de clique ativa */
-input[type="time"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    //bottom: 0;
-    //color: transparent;
-    //cursor: pointer;
-    //height: auto;
-    //left: 0;
-    //position: absolute;
-    //right: 0;
-    //top: 0;
-    //width: auto;
-}
-
 
 .field_select {
     width: 100%;       /* Ocupa toda a largura do .field-group */
@@ -227,6 +213,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 
+@media (max-width: 768px) {
+    .col-5 {
+        flex: 1 1 auto; /* Cresce 2 vezes mais, pode encolher, base começa em 0 */
+    }
+}
 
 
 
