@@ -79,3 +79,48 @@ async function inicializarTooltips() {
         });
     });
 }
+
+/**
+ * Inicializa botões de edição dinamicamente em containers de campos.
+ * @param {string} selector - O seletor do container onde o botão deve ser inserido.
+ */
+function inicializarBotoesEdicao(selector = '.box-visual') {
+    // Seleciona todos os containers de colunas de campo
+    document.querySelectorAll(selector).forEach(container => {
+        
+        // Busca o campo de entrada (input, select ou time)
+        const campo = container.querySelector('input, select');
+        
+        // Verifica se o campo existe e se o botão já não foi adicionado para evitar duplicatas
+        if (campo && !container.querySelector('.edit-button')) {
+            
+            // 1. Cria o elemento botão
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'edit-button';
+            
+            // 2. Adiciona o ícone do FontAwesome (conforme seu HTML de exemplo)
+            btn.innerHTML = '<i class="fa-regular fa-pen-to-square"></i>';
+            
+            // 3. Adiciona o evento de clique (Exemplo genérico)
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log(`Editando o campo: ${campo.id || campo.name}`);
+                // Aqui você pode disparar uma função de abertura de modal ou habilitar o campo
+            });
+
+            // 4. Garante que o container tenha position relative para o posicionamento absolute do botão
+            if (window.getComputedStyle(container).position === 'static') {
+                container.style.position = 'relative';
+            }
+
+            // 5. Insere o botão no final do container
+            container.appendChild(btn);
+        }
+    });
+}
+
+// Chamada da função ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    inicializarBotoesEdicao();
+});
