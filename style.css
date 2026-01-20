@@ -65,10 +65,10 @@ body, html {
 }
 
 
-.form_container {
+/* .form_container {
     height: auto;
     flex-wrap: wrap;
-}
+} */
 
 /* 4. GRID/ROW-CONTAINER: A mágica da responsividade AS LINHAS (Os chassis)*/
 .row-container {
@@ -82,8 +82,7 @@ body, html {
 }
 
 /* BOXES VISUAIS (Para você enxergar os espaços) */
-.box-visual {
-    //background-color: #0079bf; /* Azul Trello */
+.box-visual { /* Trocado para form-item*/    
     color: var(--color-text);
     border-radius: 4px;
     min-height: 60px;
